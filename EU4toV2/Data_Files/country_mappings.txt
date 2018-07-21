@@ -19,9 +19,11 @@
 # THE SOFTWARE.
 
 
+mappings={
+
 #Direct Mappings
-#This is essentially one-to-one country mappings to ensure that countries are available in BOTH EU4 and Vic2 get the correct tag.
-#For example, if Spain is in EU4 it will become Spain in Vic2 after conversion.
+#This is essentially one-to-one country mappings to ensure that countries are available in BOTH EU4 and V2 get the correct tag.
+#For example, if Spain is in EU4 it will become Spain in V2 after conversion.
 #EXAMPLE
 # link = { EU4 = SWE Vic2 = SWE } #Sweden
 #This above means that the EU4 tag "SWE" (Sweden) will be converted as the Vic2 tag "SWE" (Sweden)
@@ -126,8 +128,7 @@ link = { EU4 = LEI Vic2 = LEI } # Leinster
 link = { EU4 = c_leinster Vic2 = LEI } # Leinster
 link = { EU4 = IRE Vic2 = IRE } # Ireland
 link = { EU4 = k_ireland Vic2 = IRE } # Ireland
-link = { EU4 = MNS Vic2 = MNS } # Thomond/Munster (Ireland)
-#link = { EU4 = d_munster Vic2 = MUN } # Munster (Ireland)
+link = { EU4 = MNS Vic2 = MNS } # Thomond
 link = { EU4 = SCO Vic2 = SCO } # Scotland
 link = { EU4 = k_scotland Vic2 = SCO } # Scotland
 link = { EU4 = TYR Vic2 = TYR } # Tyrone
@@ -148,6 +149,16 @@ link = { EU4 = KID Vic2 = KID } # Kildare
 link = { EU4 = c_kildare Vic2 = KID } # Kildare
 link = { EU4 = HSC Vic2 = HSC } # Highlands/Gaeldom
 link = { EU4 = c_moray Vic2 = HSC } # Moray => Highlands/Gaeldom
+link = { EU4 = ORD Vic2 = ORD } # Ormond
+link = { EU4 = c_ormond Vic2 = ORD } # Ormond
+link = { EU4 = TRY Vic2 = TRY } # Tyrconnell
+link = { EU4 = c_tyrconnell Vic2 = TRY } # Tyrconnell
+link = { EU4 = FLY Vic2 = FLY } # Offaly/Faly
+link = { EU4 = MCM Vic2 = MCM } # Munster (McCarthy)
+link = { EU4 = d_munster Vic2 = MCM } # Munster (Ireland)
+link = { EU4 = KOI Vic2 = KOI } # Mann
+link = { EU4 = c_isle_of_man Vic2 = KOI } # Mann
+link = { EU4 = LOI Vic2 = LOI } # The Isles
 
 #Colonies
 link = { EU4 = BRZ Vic2 = BRZ } # Brazil
@@ -222,8 +233,8 @@ link = { EU4 = c_foix Vic2 = FOI } # Foix
 link = { EU4 = FRA Vic2 = FRA } # France
 link = { EU4 = k_france Vic2 = FRA } # France
 link = { EU4 = e_france Vic2 = FRA } # France
-link = { EU4 = GUY Vic2 = GUY } # Gascony
-link = { EU4 = d_gascogne Vic2 = GUY } # Gascony
+link = { EU4 = GUY Vic2 = GYN } # Gascony
+link = { EU4 = d_gascogne Vic2 = GYN } # Gascony
 link = { EU4 = NEV Vic2 = NEV } # Nevers
 link = { EU4 = c_nevers Vic2 = NEV } # Nevers
 link = { EU4 = NRM Vic2 = NRM } # Normandy
@@ -311,6 +322,7 @@ link = { EU4 = STY Vic2 = STY } # Styria
 link = { EU4 = c_steiermark Vic2 = STY } #Styria
 link = { EU4 = SWI Vic2 = SWI } # Switzerland
 link = { EU4 = d_swiss Vic2 = SWI } # Switzerland
+link = { EU4 = d_upper_swabia Vic2 = SWI } # Upper Swabia => Switzerland
 link = { EU4 = THU Vic2 = THU } # Thuringia
 link = { EU4 = d_thuringia Vic2 = THU } # Thuringia
 link = { EU4 = TIR Vic2 = TIR } # Tirol
@@ -330,6 +342,7 @@ link = { EU4 = MEM Vic2 = MEM } # Memmingen
 link = { EU4 = VER Vic2 = VER } # Verden
 link = { EU4 = NSA Vic2 = NAS } # Nassau
 link = { EU4 = c_nassau Vic2 = NAS } #Nassau
+link = { EU4 = d_franche_comte Vic2 = NAS } #Nassau
 link = { EU4 = RVA Vic2 = RVA } # Ravensburg
 link = { EU4 = DTT Vic2 = DTT } # Dithmarschen
 
@@ -1117,18 +1130,18 @@ link = { EU4 = TRL Vic2 = TRL } # Trapalanda
 link = { EU4 = SDM Vic2 = SDM } #Secret Denmark
 
 # Third Odyssey
-link = { EU4 = AEG Vic2 = AEG } #Aegean
-link = { EU4 = CTM Vic2 = CTM } #Creta Minoris
-link = { EU4 = ELY Vic2 = ELY } #Elysian Empire
-link = { EU4 = HBN Vic2 = HBN } #Hybernica
-link = { EU4 = NHS Vic2 = NHS } #Elysia
+link = { EU4 = AEG V2 = AEG } #Aegean
+link = { EU4 = CTM V2 = CTM } #Creta Minoris
+link = { EU4 = ELY V2 = ELY } #Elysian Empire
+link = { EU4 = HBN V2 = HBN } #Hybernica
+link = { EU4 = NHS V2 = NHS } #Elysia
 
 # Extended Vanilla
-link = { EU4 = ANV Vic2 = ANV } #Angevin Empire
-link = { EU4 = CRL Vic2 = CRL } #Carniola
-link = { EU4 = ILY Vic2 = ILY } #Illyria
-link = { EU4 = MGU Vic2 = MGU } #Maghreb
-link = { EU4 = NSE Vic2 = NSE } #North Sea Empire
+link = { EU4 = ANV V2 = ANV } #Angevin Empire
+link = { EU4 = CRL V2 = CRL } #Carniola
+link = { EU4 = ILY V2 = ILY } #Illyria
+link = { EU4 = MGU V2 = MGU } #Maghreb
+link = { EU4 = NSE V2 = NSE } #North Sea Empire
 
 ##VICTORIA2 MAIN NEW COUNTRIES (added mostly through mods)
 link = { EU4 = TEX Vic2 = TEX } #Texas
@@ -1152,6 +1165,8 @@ link = { EU4 = c_kutch Vic2 = KUT } #Kutch
 link = { EU4 = c_makran Vic2 = MAK } #Makran
 link = { EU4 = c_weimar Vic2 = WEI } #Weimar
 link = { EU4 = c_sikkim Vic2 = SIK } #Sikkim
+link = { EU4 = k_alania Vic2 = ALN } #Alania
+link = { EU4 = d_yugra Vic2 = UGR } #Yugra
 
 ##Added for some decisions to have a sense
 link = { EU4 = d_carinthia Vic2 = CAR } #Carinthia
@@ -1164,6 +1179,13 @@ link = { EU4 = ZOM Vic2 = ZOM } #Zombies
 link = { EU4 = MKD Vic2 = MKD } #Macedonia
 ##Alaska
 link = { EU4 = LSK Vic2 = LSK } #Alaska
+
+##WTWSMS new titles
+link = { EU4 = k_visigoths Vic2 = VGO } # Visigoths
+link = { EU4 = k_ostrogoths Vic2 = OGO } # Ostrogoths
+link = { EU4 = k_angleland Vic2 = AES } # Anglo-Saxony
+link = { EU4 = k_frankish Vic2 = FRK } # Frankia
+link = { EU4 = k_suebia Vic2 = SUE } # Suebi
 
 ##M&T basic mappings (only those whose tags already exist)
 link = { EU4 = AAA Vic2 = AAA } #Dummy
@@ -1294,3 +1316,4 @@ link = { EU4 = UIG Vic2 = XIN } #Uighurustan
 link = { EU4 = YEM Vic2 = YEM } #Yemen
 link = { EU4 = YRK Vic2 = YRK } #Yarkand
 link = { EU4 = ZOU Vic2 = ZHO } #Zhou
+}

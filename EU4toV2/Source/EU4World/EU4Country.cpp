@@ -378,7 +378,6 @@ EU4::Country::Country(const std::string& countryTag, std::istream& theStream):
 			{
 				customFlag.flag = to_string(1+stoi(flag[0]->getLeaf()));
 				customFlag.emblem = stoi(emblem[0]->getLeaf())+1;
-
 				vector<string> colourtokens = colours[0]->getTokens();
 				customFlag.colours = std::make_tuple(stoi(colourtokens[0]), stoi(colourtokens[1]), stoi(colourtokens[2]));
 			}
