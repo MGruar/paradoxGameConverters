@@ -65,8 +65,9 @@ void EU4Localisation::ReadFromFile(const std::string& fileName)
 void EU4Localisation::ReadFromAllFilesInFolder(const std::string& folderPath)
 {
 	// Get all files in the folder.
+	// Should be recursive - CK2 to EU4 converter uses a "replace" subdir.
 	set<string> fileNames;
-	Utils::GetAllFilesInFolder(folderPath, fileNames);
+	Utils::GetAllFilesInFolderRecursive(folderPath, fileNames);
 
 	// Read all these files.
 	for (const auto& fileName : fileNames)

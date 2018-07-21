@@ -95,7 +95,7 @@ void GetAllFilesInFolderRecursive(const std::string& path, std::set<std::string>
 		if ((fileListing = _findfirst((path + directories.front() + "/*").c_str(), &provinceFileData)) == -1L)
 		{
 			LOG(LogLevel::Error) << "Could not open directory " << path << '/' << directories.front() << "/*";
-			exit(-1);
+			break;
 		}
 
 		do
