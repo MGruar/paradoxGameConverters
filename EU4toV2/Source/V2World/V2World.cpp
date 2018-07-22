@@ -1757,7 +1757,7 @@ void V2World::output() const
 	flags.SetV2Tags(countries);
 	flags.output();
 
-	// Create localisations for all new countries. We don't actually know the names yet so we just use the tags as the names.
+	// Create localisations for all countries. We don't actually know the names yet so we just use the tags as the names.
 	LOG(LogLevel::Debug) << "Writing localisation text";
 	string localisationPath = "Output/" + Configuration::getOutputName() + "/localisation";
 	if (!Utils::TryCreateFolder(localisationPath))
@@ -1811,7 +1811,7 @@ void V2World::output() const
 	for (map<string, V2Country*>::const_iterator i = countries.begin(); i != countries.end(); i++)
 	{
 		const V2Country& country = *i->second;
-		if (country.isNewCountry())
+		if (country.hasLocalisation())
 		{
 			country.outputLocalisation(localisationFile);
 		}

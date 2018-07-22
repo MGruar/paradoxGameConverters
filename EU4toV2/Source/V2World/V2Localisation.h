@@ -69,6 +69,7 @@ public:
 
 	std::string GetLocalName();
 	std::string GetLocalAdjective();
+	std::string GetTag() const;
 
 private:
 	static const size_t numLanguages = 14;

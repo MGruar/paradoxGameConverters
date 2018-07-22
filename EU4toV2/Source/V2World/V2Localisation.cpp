@@ -139,6 +139,11 @@ std::string V2Localisation::GetLocalAdjective()
 	return "";
 }
 
+std::string V2Localisation::GetTag() const
+{
+	return Convert(tag);
+}
+
 std::string V2Localisation::StripAccents(const std::string& text)
 {
 	std::string accents = "àáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞ";

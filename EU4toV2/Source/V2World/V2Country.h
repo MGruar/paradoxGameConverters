@@ -122,6 +122,8 @@ class V2Country
 		int								getNumFactories() const { return numFactories; }
 
 		string							getReligion() const { return religion; }
+		
+		bool							hasLocalisation() const { return localisation.GetTag() != ""; }
 
 	private:
 		shared_ptr<Object> parseCountryFile(const string& filename);
