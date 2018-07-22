@@ -335,6 +335,8 @@ void V2Province::convertFromOldProvince(const EU4Province* oldProvince)
 	colonial = 0;
 	wasColonised = oldProvince->wasColonised();
 	originallyInfidel = oldProvince->wasInfidelConquest();
+	// LOG(LogLevel::Debug) << "Changing province " << num << " from " << name << " to " << oldProvince->getProvName();
+	setName(oldProvince->getProvName());
 }
 
 

@@ -1824,6 +1824,29 @@ void V2World::output() const
 		i->second->output();
 		LOG(LogLevel::Debug) << "province " << i->second->getName() << " has " << i->second->getNavalBaseLevel() << " naval base";	//test
 	}
+	
+	LOG(LogLevel::Debug) << "Writing province names (Experimental, will involve dupes!)";
+	FILE* provLocalisationFile;
+	if (fopen_s(&provLocalisationFile, (localisationPath + "/0_ProvinceNames.csv").c_str(), "a") != 0)
+	{
+		LOG(LogLevel::Error) << "Could not update localisation province text file";
+		exit(-1);
+	}
+	for (map<int, V2Province*>::const_iterator i = provinces.begin(); i != provinces.end(); i++)
+	{
+		if (i->second->getOwner() == "")
+		{
+			continue;
+		}
+		std::ostringstream localisationStream;
+		localisationStream << "PROV" << i->second->getNum() << ";" << i->second->getName()
+			<< ";;;;;;;;;;;;;x;;;;\n";
+		// TODO: Actually support other languages.
+		std::string localisationString = localisationStream.str();
+		fwrite(localisationString.c_str(), sizeof(std::string::value_type), localisationString.size(), provLocalisationFile);
+	}
+	fclose(provLocalisationFile);
+	
 	LOG(LogLevel::Debug) << "Writing countries";
 	for (map<string, V2Country*>::const_iterator itr = countries.begin(); itr != countries.end(); itr++)
 	{
